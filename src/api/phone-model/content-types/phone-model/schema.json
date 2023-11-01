@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phone_models",
+  "info": {
+    "singularName": "phone-model",
+    "pluralName": "phone-models",
+    "displayName": "Phone Model",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phoneName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "phoneImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "caption": {
+      "type": "string"
+    },
+    "monthlyPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "totalPrice": {
+      "type": "decimal"
+    },
+    "availability": {
+      "type": "enumeration",
+      "enum": [
+        "available",
+        "out of stock",
+        "low stock ",
+        "not available"
+      ],
+      "required": true
+    },
+    "phoneId": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "regex": "^\\S+$"
+    },
+    "financingLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "financingCaption": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phone_types",
+  "info": {
+    "singularName": "phone-type",
+    "pluralName": "phone-types",
+    "displayName": "Phone Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categoryId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "categoryLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "phoneModels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::phone-model.phone-model"
+    }
+  }
+}
